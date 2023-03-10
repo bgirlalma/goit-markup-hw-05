@@ -612,7 +612,6 @@ a{
 
 .modal {
     position: absolute;
-    display: flex;
     min-width: 408px;
     min-height: 576px;
     top: 50%;
@@ -625,15 +624,34 @@ a{
 
 
 .type-close {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 24px;
+    margin-right: 24px;
+    
     width: 24px;
     height: 24px;
-    margin-top: 34px;
-    margin-right: 34px;
-    background: #E7E9FC;
+   
+    cursor: pointer;
+    background-color: #E7E9FC;
+    color: var(--main-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    transition-property: background-color;
+}
+
+.type-close:hover, .type-close:focus{
+    background-color: #404BBF;
+    color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.close-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: currentColor;
 }
 
 /* Modal end */
