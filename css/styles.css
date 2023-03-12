@@ -129,6 +129,9 @@ a{
    color: var(--type-color);
 }
 
+.active-link {
+    color: #404BBF;
+}
 .header-link.active-link::after{
     content: "";
     width: 100%;
@@ -444,7 +447,7 @@ a{
     background-color: #4D5AE5;
     fill: #F4F4FD;
     border-radius: 50%;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-list{
@@ -499,7 +502,7 @@ a{
     padding: 16px 32px;
     border: 1px solid var(--customers-color);
     border-radius: 4px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:is(:hover, :focus) {
@@ -598,7 +601,7 @@ a{
     height: 100%;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%; 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link:hover, .footer-link:focus{
@@ -623,12 +626,13 @@ a{
     left: 0;
    
     background-color: rgba(46, 47, 66, 0.4);
-    
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
 }
 
 .modal {
@@ -638,11 +642,11 @@ a{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
-
 
 .type-close {
     position: absolute;
@@ -670,9 +674,8 @@ a{
 }
 
 .close-svg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
     fill: currentColor;
 }
 
@@ -710,7 +713,7 @@ a{
     border: 1px solid #E7E9FC;
     border-radius: 4px;
     padding: 12px 24px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     font-weight: 500;
     font-size: 16px;
